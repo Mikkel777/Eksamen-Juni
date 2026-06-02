@@ -1,0 +1,16 @@
+<%- include('../templates/nav') %>
+
+<form action="/saker/opprett" method="POST">
+    <input type="text" name="title" placeholder="Tittel" required>
+
+    <textarea name="description" required></textarea>
+
+    <select name="category">
+        <option value="Lav">Lav</option>
+        <option value="Middels">Middels</option>
+        <option value="Høy">Høy</option>
+        <option value="Kritisk">Kritisk</option>
+    </select>
+
+    <button type="submit">Opprett sak</button>
+</form>

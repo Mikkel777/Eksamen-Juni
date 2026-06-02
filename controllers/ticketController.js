@@ -1,7 +1,7 @@
 const Ticket = require("../models/Ticket");
 
 exports.visSak = (req, res) => {
-    res.render("tickets/opprett");
+    res.render("saker/opprett");
 };
 
 exports.opprettSak = async (req, res) => {
