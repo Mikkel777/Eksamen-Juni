@@ -1,13 +1,10 @@
 # Risikoanalyse
 
-| Risiko                        | Konsekvens                                      | Sannsynlighet |
-| ----------------------------- | ----------------------------------------------- | ------------- |
-| Uautorisert tilgang til konto | Brukere kan få tilgang til data de ikke skal se | Middels       |
-| Svake passord                 | Kontoer kan bli kompromittert                   | Middels       |
-| Databasen blir utilgjengelig  | Systemet kan ikke brukes                        | Lav           |
-| Feilregistrering av saker     | Feil informasjon i systemet                     | Middels       |
-| Tap av data                   | Informasjon kan gå tapt                         | Lav           |
-
-## Oppsummering
-
-De største risikoene i systemet er knyttet til tilgangskontroll og brukerhåndtering. Systemet må derfor ha sikre passord og rollebasert tilgang.
+| Risiko                         | Konsekvens                                             | Sannsynlighet | Tiltak                                      |
+| ------------------------------ | ------------------------------------------------------ | ------------- | ------------------------------------------- |
+| Uautorisert tilgang til konto  | Brukere kan få tilgang til informasjon de ikke skal se | Middels       | Rollebasert tilgang og sikre passord        |
+| Svake passord                  | Kontoer kan bli kompromittert                          | Middels       | Kryptering med bcrypt og krav til passord   |
+| Tap av data                    | Viktig informasjon kan gå tapt                         | Lav           | Jevnlig sikkerhetskopi av databasen         |
+| Databasefeil                   | Systemet blir utilgjengelig                            | Lav           | Overvåking og sikkerhetskopi                |
+| Feilregistrering av saker      | Feil informasjon lagres i systemet                     | Middels       | Validering av input og opplæring av brukere |
+| Uautorisert tilgang til logger | Sensitiv informasjon kan eksponeres                    | Lav           | Kun administrator har tilgang til logger    |
