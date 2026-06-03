@@ -1,5 +1,5 @@
 exports.erInnlogget = (req, res, next) => {
-    if(!req.sesison.user) {
+    if(!req.session.user) {
         return res.redirect("/login");
     }
     next();
