@@ -32,3 +32,21 @@ exports.visAlleSaker = async (req, res) => {
         res.send("Kunne ikke hente alle saker");
     }
 };
+
+exports.visSakDetaljer = async (req, res) => {
+    try {
+        const sak = await Ticket.findById(req.params.id);
+
+        if (!sak) {
+            return res.send("Saken finnes ikke");
+        }
+
+        res.render("saker/detaljer", {
+            sak
+        });
+
+    } catch (error) {
+        console.log(error);
+        res.send("Feil ved henting av sak");
+    }
+};
