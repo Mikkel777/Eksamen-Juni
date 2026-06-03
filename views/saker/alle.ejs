@@ -1,29 +1,40 @@
 <head>
     <link rel="stylesheet" href="/main.css">
 </head>
+
 <%- include("../templates/nav") %>
 
-<h1>Alle saker</h1>
+<main class="saker-page">
+    <div class="saker-container">
+        <h1 class="saker-title">Alle saker</h1>
 
-<% saker.forEach(sak => { %>
-    <div>
-        <h3><%= sak.title %></h3>
+        <% if (saker && saker.length > 0) { %>
+            <% saker.forEach(sak => { %>
+                <div class="saker-card">
+                    <div class="saker-card-header">
+                        <h3 class="saker-card-title"><%= sak.title %></h3>
+                        <span class="saker-status saker-status-<%= sak.status.toLowerCase().replace(/\s+/g, '-') %>">
+                            <%= sak.status %>
+                        </span>
+                    </div>
 
-        <p>
-            <strong>Beskrivelse:</strong>
-            <%= sak.description %>
-        </p>
+                    <div class="saker-card-body">
+                        <p class="saker-description">
+                            <strong>Beskrivelse:</strong>
+                            <%= sak.description %>
+                        </p>
 
-        <p>
-            <strong>Kategori:</strong>
-            <%= sak.category %>
-        </p>
-
-        <p>
-            <strong>Status:</strong>
-            <%= sak.status %>
-        </p>
-
-        <hr>
+                        <p class="saker-category">
+                            <strong>Kategori:</strong>
+                            <span class="saker-category-badge saker-category-<%= sak.category.toLowerCase() %>">
+                                <%= sak.category %>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p class="saker-empty">Ingen saker funnet.</p>
+        <% } %>
     </div>
-<% }) %>
+</main>
