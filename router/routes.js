@@ -22,5 +22,6 @@ router.post("/login", authController.loginUser);
 //ticketcontroller
 router.get("/saker/opprett", ticketController.visSak);
 router.post("/saker/opprett", ticketController.opprettSak);
+router.get("/saker", ticketController.visAlleSaker);
 
 module.exports = router;

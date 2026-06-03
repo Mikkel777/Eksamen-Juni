@@ -13,9 +13,22 @@ exports.opprettSak = async (req, res) => {
             category: req.body.category,
             createdBy: req.body.createdBy
         });
-        res.redirect("/");
+        res.redirect("/saker");
     } catch (error) {
         console.log(error);
         res.send("Feil ved opretting av saken");
+    }
+};
+
+exports.visAlleSaker = async (req, res) => {
+    try {
+        const saker = await Ticket.find();
+
+        res.render("saker/alle", {
+            saker
+        });
+    } catch (error) {
+        console.log(error);
+        res.send("Kunne ikke hente alle saker");
     }
 };

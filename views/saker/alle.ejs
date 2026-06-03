@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<%- include("../templates/nav") %>
+
+<h1>Alle saker</h1>
+
+<% saker.forEach(sak => { %>
+    <div>
+        <h3><%= sak.title %></h3>
+
+        <p>
+            <strong>Beskrivelse:</strong>
+            <%= sak.description %>
+        </p>
+
+        <p>
+            <strong>Kategori:</strong>
+            <%= sak.category %>
+        </p>
+
+        <p>
+            <strong>Status:</strong>
+            <%= sak.status %>
+        </p>
+
+        <hr>
+    </div>
+<% }) %>
