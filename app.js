@@ -20,8 +20,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/", routes);
+//sessions
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}));
 
+app.use("/", routes);
 
 app.use((req, res) => {
     res.status(404).send('404 - Page not found');
