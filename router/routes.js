@@ -8,12 +8,16 @@ router.get("/", (req, res)=> {
 });
 
 router.get("/signup", (req, res)=> {
-    res.render("signup");
+    res.render("auth/signup");
 });
 
 router.get("/login", (req, res) => {
-    res.render("login");
+    res.render("auth/login");
 });
+
+//authcontroller
+router.post("/signup", authController.registerUser);
+router.post("/login", authController.loginUser);
 
 //ticketcontroller
 router.get("/saker/opprett", ticketController.visSak);
