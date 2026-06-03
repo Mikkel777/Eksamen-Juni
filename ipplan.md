@@ -4,8 +4,8 @@
 
 | Rolle        | IP-adresse     | Beskrivelse |
 |-------------|---------------|------------|
-| Backend VM  | 10.12.7.x   | Kjører Node.js og frontend |
-| Database VM | 10.12.7.x   | Kjører MongoDB |
+| Backend VM  | 10.12.7.60   | Kjører Node.js og frontend |
+| Database VM | 10.12.7.61   | Kjører MongoDB |
 
 ---
 
@@ -34,4 +34,4 @@ Frontend og backend kjører på samme server.
 Databasen er separert på egen VM for bedre sikkerhet og skalerbarhet.
 
 Flyt:
-Bruker - Webserver - API - Database
+Bruker - Webserver - Database
