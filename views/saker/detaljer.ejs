@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<%- include("../templates/nav") %>
+
+<main class="saker-page">
+    <div class="saker-container">
+        <div class="saker-card">
+            <div class="saker-card-header">
+                <h1 class="saker-card-title">
+                    <%= sak.title %>
+                </h1>
+                <span class="saker-status saker-status-<%= sak.status.toLowerCase().replace(/\s+/g, '-') %>">
+                    <%= sak.status %>
+                </span>
+            </div>
+            <div class="saker-card-body">
+                <p>
+                    <strong>Beskrivelse:</strong>
+                </p>
+                <p class="saker-description">
+                    <%= sak.description %>
+                </p>
+                <p class="saker-category">
+                    <strong>Kategori:</strong>
+                    <span class="saker-category-badge saker-category-<%= sak.category.toLowerCase() %>">
+                        <%= sak.category %>
+                    </span>
+                </p>
+                <p>
+                    <strong>Opprettet:</strong>
+                    <%= sak.createdAt.toLocaleString("no-NO") %>
+                </p>
+            </div>
+        </div>
+    </div>
+</main>

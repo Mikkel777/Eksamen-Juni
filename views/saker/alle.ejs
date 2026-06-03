@@ -12,7 +12,11 @@
             <% saker.forEach(sak => { %>
                 <div class="saker-card">
                     <div class="saker-card-header">
-                        <h3 class="saker-card-title"><%= sak.title %></h3>
+                        <h3 class="saker-card-title">
+                            <a href="/saker/<%= sak._id %>">
+                                <%= sak.title %>
+                            </a>
+                        </h3>
                         <span class="saker-status saker-status-<%= sak.status.toLowerCase().replace(/\s+/g, '-') %>">
                             <%= sak.status %>
                         </span>
