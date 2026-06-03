@@ -2,6 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serifs;
     padding: 0;
     margin: 0;
+    background-color: #f5f7fa;
 }
 
 .navbar {
@@ -49,4 +50,138 @@ body {
 .nav-right a[href="/signup"]:hover {
     background-color: #2043a3;
     color: white;
+}
+
+/* alle saker side */
+.saker-page {
+    background-color: #f5f7fa;
+    min-height: calc(100vh - 70px);
+}
+
+.saker-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.saker-title {
+    color: #1f2937;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+}
+
+/* Saker cards */
+.saker-card {
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.saker-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.saker-card-header {
+    background-color: #f9fafb;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.saker-card-title {
+    margin: 0;
+    color: #1f2937;
+    font-size: 18px;
+}
+
+.saker-card-body {
+    padding: 20px;
+}
+
+.saker-description {
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+.saker-description strong,
+.saker-category strong {
+    color: #1f2937;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.saker-category {
+    margin: 0;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+/* Category badges */
+.saker-category-badge {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.saker-category-kritisk {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: #dc2626;
+}
+
+.saker-category-høy,
+.saker-category-hoy {
+    background-color: #ffedd5;
+    color: #9a3412;
+    border: #f97316;
+}
+
+.saker-category-middels {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: #f59e0b;
+}
+
+.saker-category-lav {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border: #3b82f6;
+}
+
+/* Status badges */
+.saker-status {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.saker-status-åpen,
+.saker-status-open {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.saker-status-under-behandling,
+.saker-status-under-behandling,
+.saker-status-in-progress {
+    background-color: #fed7aa;
+    color: #92400e;
+}
+
+.saker-status-lukket,
+.saker-status-closed {
+    background-color: #fee2e2;
+    color: #991b1b;
 }
