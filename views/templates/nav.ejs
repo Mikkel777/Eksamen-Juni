@@ -2,12 +2,19 @@
     <nav class="navbar">
         <div class="nav-left">
             <a href="/">Hjemmeside</a>
-            <a href="/saker">Alle saker</a>
-            <a href="/saker/opprett">Opprett sak</a>
         </div>
         <div class="nav-right">
-            <a href="/login">Logg in</a>
-            <a href="/signup">Registrer deg</a>
+            <% if (user) { %>
+                <a href="/saker">Alle saker</a>
+                <a href="/saker/opprett">Opprett sak</a>
+                <a href="/logout">Logg ut</a>
+            <% } else { %>
+                <a href="/signup">Registrer</a>
+                <a href="/login">Login</a>
+            <% } %>
+            <% if (user && user.role === "admin") { %>
+                <a href="/admin">Admin</a>
+            <% } %>
         </div>
     </nav>
 </header>
