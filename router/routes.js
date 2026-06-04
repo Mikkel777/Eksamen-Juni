@@ -26,4 +26,8 @@ router.post("/saker/opprett", erInnlogget, ticketController.opprettSak);
 router.get("/saker", erInnlogget, ticketController.visAlleSaker);
 router.get("/saker/:id", erInnlogget, ticketController.visSakDetaljer);
 
+//admin
+router.get("/admin", erAdmin, adminController.dashboard);
+router.post("/admin/bruker/:id/lærer", erAdmin, adminController.giLærerRolle);
+
 module.exports = router;
