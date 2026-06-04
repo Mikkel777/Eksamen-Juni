@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" href="/main.css">
+</head>
+
+<%- include("../templates/nav") %>
+
+<h1>Adminpanel</h1>
+
+<% brukere.forEach(bruker => { %>
+    <div>
+        <p>
+            <strong><%= bruker.username %></strong>
+            - <%= bruker.role %>
+        </p>
+        <% if (bruker.role === "elev") { %>
+            <form action="/admin/bruker/<%= bruker._id %>/lærer" method="POST">
+                <button type="submit">
+                    Gi lærerrolle
+                </button>
+            </form>
+        <% } %>
+        <hr>
+    </div>
+<% }) %>
