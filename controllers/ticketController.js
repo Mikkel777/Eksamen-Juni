@@ -50,3 +50,25 @@ exports.visSakDetaljer = async (req, res) => {
         res.send("Feil ved henting av sak");
     }
 };
+
+exports.slettSak = async (req, res) => {
+    await Ticket.findByIdAndDelete(req.params.id);
+
+    res.redirect("/saker");
+};
+
+exports.endreStatus = async (req, res) => {
+    try {
+        await Ticket.findByIdAndUpdate(
+            req.params.id,
+            {
+                status: req.body.status
+            }
+        );
+
+        res.redirect("/saker/" + req.params.id);
+    } catch (error) {
+        console.log(error);
+        res.send("Kunne ikke endre status");
+    }
+};
