@@ -1,14 +1,14 @@
 # Testrutine
 
-## Test 1 - Registrering av bruker
+## Test 1: Registrering av bruker
 
 Forventet resultat:
 
 * Bruker opprettes i databasen.
-* Passord lagres kryptert.
+* Passord lagres kryptert med bcrypt.
 
 
-## Test 2 - Innlogging
+## Test 2: Innlogging
 
 Forventet resultat:
 
@@ -16,7 +16,7 @@ Forventet resultat:
 * Session opprettes.
 
 
-## Test 3 - Tilgangskontroll
+## Test 3: Tilgangskontroll
 
 Forventet resultat:
 
@@ -24,21 +24,21 @@ Forventet resultat:
 * Innloggede brukere får tilgang til saker.
 
 
-## Test 4 - Opprette sak
+## Test 4: Opprette sak
 
 Forventet resultat:
 
 * Ny sak lagres i MongoDB.
 
 
-## Test 5 - Vise saker
+## Test 5: Vise saker
 
 Forventet resultat:
 
 * Alle registrerte saker vises.
 
 
-## Test 6 - Rollebasert tilgang
+## Test 6: Rollebasert tilgang
 
 Forventet resultat:
 
@@ -46,14 +46,14 @@ Forventet resultat:
 * Admin får tilgang til adminpanelet.
 
 
-## Test 7 - Databasetilkobling
+## Test 7: Databasetilkobling
 
 Forventet resultat:
 
 * Node.js-server kobler til MongoDB.
 
 
-## Test 8 - Brannmur
+## Test 8: Brannmur
 
 Forventet resultat:
 
