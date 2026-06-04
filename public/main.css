@@ -5,6 +5,24 @@ body {
     background-color: #f5f7fa;
 }
 
+.information {
+    text-align: center;
+    margin: 50px;
+    padding-top: 70px;
+}
+
+.information h1 {
+    font-size: 40px;
+}
+
+.login-card h1 {
+    text-align: center;
+}
+
+.login-card {
+    text-align: center;
+}
+
 .navbar {
     background-color: #ffffff;
     padding: 16px 20px;
